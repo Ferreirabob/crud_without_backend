@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD Without Backend</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <span>Schedule Project Crud</span>
+      <button onclick="openModal()" id="new">New User</i></button>
+    </div>
+
+    <div class="divTable">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Mail</th>
+            <th class="action">Edit</th>
+            <th class="action">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="modal-container">
+      <div class="modal">
+        <form>
+          <label for="m-name">Name</label>
+          <input id="m-name" type="text" required placeholder="Name"/>
+  
+          <label for="m-phone">Phone</label>
+          <input id="m-phone" type="text" required placeholder="(xx) x xxxx-xxxx"/>
+  
+          <label for="m-mail">Mail</label>
+          <input id="m-mail" type="text" required placeholder="email@mail.com"/>
+          <button id="btnSave">Save</button>
+          <script>
+            $("#m-phone").mask("(99) 99999-9999")
+          </script>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
